@@ -1,0 +1,241 @@
+
+    @import url('https://fonts.googleapis.com/css2?family=Protest+Strike&display=swap');
+
+:root{
+  --color-primary: #ffbb02;
+  --color-white: #f1f1f1;
+  --color-black: #333;
+  --color-grey: #2d3436;
+}
+
+/** CORES E FONTES */
+.color-primary {
+  background-color: var(--color-primary);
+}
+
+* {
+  font-family: 'Protest Strike', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+}
+
+/** CORREÇÕES */
+/* Removendo linha em torno no botão toggler da navbar ao clicar */
+.navbar-toggler:focus, .section-btn:focus, .btn-reserva {
+  outline: none;
+}
+
+.section > h2, .section-btn {
+  z-index: 1000;
+}
+
+.rotate-text {
+  margin: auto;
+  color: #000;
+  text-align: center;
+}
+
+.rotate-gif {
+  margin: 0 auto;
+  height: 150px;
+  width: auto;
+  display: none;
+  transform: rotate(90deg); /* Rotaciona a imagem em 90 graus */
+
+}
+
+/** GRID */
+
+  .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 5px;
+    }
+    
+.post {
+  position: relative;
+  width: 31.33%; /* 33.33% de largura com um espaço de 10px entre os posts */
+  display: flex;
+  justify-content: center; /* Centralizar horizontalmente */
+  align-items: center;
+}
+
+.post img {
+  width: 100%;
+  display: block;
+  border-radius: 5px;
+  margin: auto;
+}
+
+
+body {
+  background-color: #fff;
+  margin-bottom: auto;
+}
+
+/* Formulário de reserva */
+form {
+  width: 80vw;
+  margin: auto;
+  margin-top: 20px;
+  margin-bottom: 21px;
+  padding: 0 20px 10px 20px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+}
+
+form label {
+  padding: 15px 0 0 0;
+  margin: 0;
+}
+
+form input,
+form select,
+form textarea {
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+form input[type="button"] {
+  background-color: var(--color-primary);
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+form input[type="button"]:hover {
+  background-color: var(--color-primary);
+}
+
+.t-alert {
+  background-color: var(--color-primary);
+  color: #000;
+  font-size: small;
+  padding: 0;
+  margin: 0;
+}
+
+.t-alert p {
+  color: #000;
+  margin: 0;
+  padding: 0;
+}
+
+.carousel {
+  padding: 5px 0 0 0;
+}
+
+.sec-welcome {
+  color: var(--color-primary);
+  padding: 0 1rem;
+  text-align: center;
+  margin: 20px 0 !important;
+}
+
+.sec-welcome > .logo {
+  width: auto;
+  height: 120px;
+  border-radius: 8px;
+  margin: 0 0 5px 0;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+}
+
+.icons-container {
+  padding: 15px 0 0 0;
+  display: flex;
+  gap: 20px; /* Espaçamento de 10px entre os ícones */
+}
+
+.icon-link {
+  padding: 0 20px; /* Padding de 10px nas laterais */
+  width: auto;
+  height: 40px;
+}
+
+.btn-reserva {
+  background-color: var(--color-primary);
+  border-radius: 5px;
+  color: #000;
+  margin: 0 5px;
+}
+
+.section {
+  position: relative;
+  width: 100vw;
+  height: 220px;
+  margin: 5px 0 5px 0;
+  background-size: cover; /* Ajusta a imagem para cobrir toda a área */
+  background-position: center; /* Centraliza a imagem */
+}
+
+.section > h2, p {
+  z-index: 1000;
+  color: #fff;
+}
+
+.section-btn {
+  position: absolute; /* Posicionamento absoluto */
+  bottom: 10px; /* Na parte inferior */
+  right: 10px; /* À direita */
+  display: flex; /* Ativar flexbox */
+  justify-content: center; /* Alinhar itens horizontalmente */
+  align-items: center; /* Alinhar itens verticalmente */
+}
+
+.sec-cultura {
+  background-image: url("../../assets/image/cultura.png");
+}
+
+.sec-reserva {
+  background-image: url('../../assets/image/reserva.png');
+}
+
+.sec-estrutura {
+  background-image: url("../../assets/image/estrutura.png");
+}
+
+.sec-trabalhe {
+  background-image: url("../../assets/image/trabalhe.png");
+}
+
+.sec-cultura::before, .sec-estrutura::before, .sec-trabalhe::before, .sec-reserva::before {
+  content: ""; /* Cria um pseudo-elemento para cobrir a imagem */
+  position: absolute; /* Posiciona o pseudo-elemento sobre a imagem */
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0; 
+  background-color: rgba(0, 0, 0, 0.5); /* Cor preta com transparência de 50% */
+}
+
+.section > h2 {
+  color: var(--color-white);
+  text-shadow: 2px 2px 4px rgba(0,0,0, 0.5);
+}
+
+.section-btn {
+  border-radius: 8px;
+  background-color: var(--color-primary);
+  color: #000;
+  padding: 4px 19px;
+}
+
+footer {
+  width: 100%;
+  background-color: var(--color-primary);
+  padding: 6px 0 8px 0;/* Espaçamento interno */
+  margin: auto;
+}
+
+footer > p {
+  color: #000;
+  margin: 0;
+  padding: 0;
+}
