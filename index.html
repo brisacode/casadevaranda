@@ -223,12 +223,16 @@ new Vue({
     currentPage: ''
   },
   mounted() {
-    if (window.location.pathname === '') {
+    const path = window.location.pathname;
+    const searchParams = window.location.search;
+
+    // Verifica se o pathname é vazio ou raiz e se não há parâmetros de busca
+    if ((path === '' || path === '/') && searchParams === '') {
       this.currentPage = 'Index';
     } else {
-      this.currentPage = window.location.pathname;
+      // Se não for vazio, chama a função changePage
+      this.changePage(path);
     }
-    this.changePage();
   },
   methods: {
     changePage(page) {
